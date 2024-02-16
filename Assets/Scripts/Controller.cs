@@ -6,6 +6,7 @@ public class Controller : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private float _moveSpeed;
+    
 
     void Update()
     {
@@ -23,7 +24,7 @@ public class Controller : MonoBehaviour
         {
             transform.eulerAngles = Vector3.up * 180;
         }
-        else
+        else if (inputDir > 0)
         {
             transform.rotation = Quaternion.identity;
         }
